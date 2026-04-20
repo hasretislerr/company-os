@@ -1,0 +1,137 @@
+<p align="center">
+  <img src="https://github.com/hasretislerr/company-os/blob/main/engStart.png" />
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-1.22-00ADD8?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/WebSocket-22C55E?style=for-the-badge" />
+</p>
+
+
+# 🏢 Company OS
+It is a scalable full-stack operating system developed for company management and communication. It combines task management, communication, meetings, leave processes, and organization management into a single platform.
+
+---
+
+# 🚀 Project Objectives
+- Digitalize internal company processes
+- Facilitate team communication
+- Organize task and project tracking
+- Centralize workflows
+
+---
+
+## 🧱 Tech Stack
+
+### Backend
+- Go (Golang)
+- REST + WebSocket architecture
+- PostgreSQL
+- RabbitMQ (event-driven structure)
+- Elasticsearch
+- Clean Architecture approach
+
+### Frontend
+- Next.js (React)
+- TypeScript
+- Tailwind CSS
+- App Router
+
+### DevOps
+- Docker
+- Docker Compose
+
+---
+
+## 📦 Features
+
+### 👥 Organization Management
+- Company creation and management
+- Department and role system
+- Member invitation system
+
+### 📋 Task System
+- Project and task management
+- Drag-and-drop board system
+- Priority and status tracking
+
+### 💬 Real-time Communication
+- Chat system
+- Notification system
+- WebSocket-based structure
+
+### 📅 Calendar & Meetings
+- Meeting scheduling
+- Calendar integration
+- Reminder system
+
+### 📝 Leave & Approval Processes
+- Leave requests
+- Multi-stage approval system
+- Admin panel
+
+### 📊 Activity Tracking
+- User logs
+- System event logs
+
+---
+
+## 🏗️ Architecture
+The project is structured according to Clean Architecture principles:
+
+- backend/
+- ├── internal/
+- │   ├── domain/
+- │   ├── service/
+- │   ├── adapter/
+- │   └── config/
+- ├── cmd/
+- └── migrations/
+
+---
+
+⚙️ Setup
+
+### 1. Cloning the repository
+git clone https://github.com/hasretislerr/company-os.git
+cd company-os
+
+---
+
+### 2. Running with Docker
+docker-compose up --build
+
+---
+
+### 3. Running the Backend
+cd backend
+go mod tidy
+go run main.go
+
+---
+
+### 4. Running the Frontend
+cd frontend
+npm install
+npm run dev
+
+---
+
+## 🌍 Environment Variables
+
+- DB_HOST=localhost
+- DB_PORT=5432
+- DB_USER=postgres
+- DB_PASSWORD=postgres
+- DB_NAME=company_os
+- JWT_SECRET=secret
+
+## 📈 Development Status
+
+- Backend completed (core structure)
+- Frontend dashboard ready
+- Chat system active
+- Task system active
+- Development is ongoing
