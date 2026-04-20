@@ -1,0 +1,300 @@
+﻿{
+    "chat_room_members":  [
+                              "chat_room_id",
+                              "user_id",
+                              "joined_at",
+                              ""
+                          ],
+    "workspaces":  [
+                       "id",
+                       "organization_id",
+                       "created_by",
+                       "created_at",
+                       "name",
+                       ""
+                   ],
+    "organization_members":  [
+                                 "id",
+                                 "organization_id",
+                                 "user_id",
+                                 "role_id",
+                                 "joined_at",
+                                 "deleted_at",
+                                 "department",
+                                 "role",
+                                 ""
+                             ],
+    "attendance_audit_logs":  [
+                                  "created_at",
+                                  "organization_id",
+                                  "attendance_id",
+                                  "changed_by",
+                                  "old_value",
+                                  "new_value",
+                                  "id",
+                                  "reason",
+                                  ""
+                              ],
+    "chat_messages":  [
+                          "sender_id",
+                          "chat_room_id",
+                          "file_size",
+                          "created_at",
+                          "id",
+                          "status",
+                          "content",
+                          "file_name",
+                          "file_type",
+                          "file_url",
+                          ""
+                      ],
+    "user_leave_balances":  [
+                                "id",
+                                "organization_id",
+                                "user_id",
+                                "balance_days",
+                                "updated_at",
+                                "leave_type",
+                                ""
+                            ],
+    "boards":  [
+                   "id",
+                   "organization_id",
+                   "project_id",
+                   "created_at",
+                   "name",
+                   "type",
+                   ""
+               ],
+    "meeting_participants":  [
+                                 "meeting_id",
+                                 "user_id",
+                                 "joined_at",
+                                 "status",
+                                 ""
+                             ],
+    "chat_rooms":  [
+                       "id",
+                       "organization_id",
+                       "created_at",
+                       "name",
+                       "type",
+                       ""
+                   ],
+    "invitations":  [
+                        "id",
+                        "organization_id",
+                        "invited_by",
+                        "created_at",
+                        "expires_at",
+                        "is_verified",
+                        "department",
+                        "verification_code",
+                        "email",
+                        "first_name",
+                        "last_name",
+                        "role",
+                        ""
+                    ],
+    "board_columns":  [
+                          "id",
+                          "board_id",
+                          "position",
+                          "is_done_column",
+                          "name",
+                          ""
+                      ],
+    "role_permissions":  [
+                             "role_id",
+                             "permission_id",
+                             ""
+                         ],
+    "permissions":  [
+                        "id",
+                        "code",
+                        "description",
+                        ""
+                    ],
+    "users":  [
+                  "id",
+                  "created_at",
+                  "updated_at",
+                  "email_notifications",
+                  "push_notifications",
+                  "activity_summary",
+                  "last_seen",
+                  "deleted_at",
+                  "bio",
+                  "email",
+                  "password_hash",
+                  "first_name",
+                  "last_name",
+                  "avatar_url",
+                  "theme",
+                  "phone_number",
+                  ""
+              ],
+    "projects":  [
+                     "id",
+                     "organization_id",
+                     "workspace_id",
+                     "created_at",
+                     "name",
+                     "description",
+                     ""
+                 ],
+    "organizations":  [
+                          "created_by",
+                          "updated_at",
+                          "deleted_at",
+                          "id",
+                          "created_at",
+                          "name",
+                          "slug",
+                          "plan_type",
+                          ""
+                      ],
+    "announcements":  [
+                          "id",
+                          "organization_id",
+                          "author_id",
+                          "created_at",
+                          "updated_at",
+                          "deleted_at",
+                          "target_department",
+                          "priority",
+                          "title",
+                          "content",
+                          "target_type",
+                          ""
+                      ],
+    "notifications":  [
+                          "id",
+                          "organization_id",
+                          "user_id",
+                          "reference_id",
+                          "is_read",
+                          "created_at",
+                          "title",
+                          "message",
+                          "type",
+                          ""
+                      ],
+    "tasks":  [
+                  "id",
+                  "organization_id",
+                  "project_id",
+                  "board_id",
+                  "column_id",
+                  "updated_at",
+                  "deleted_at",
+                  "description",
+                  "assignee_id",
+                  "reporter_id",
+                  "due_date",
+                  "created_at",
+                  "title",
+                  "priority",
+                  ""
+              ],
+    "webauthn_credentials":  [
+                                 "id",
+                                 "user_id",
+                                 "credential_id",
+                                 "public_key",
+                                 "counter",
+                                 "created_at",
+                                 "attestation_type",
+                                 "transport",
+                                 ""
+                             ],
+    "schema_migrations":  [
+                              "version",
+                              "dirty",
+                              ""
+                          ],
+    "leave_requests":  [
+                           "id",
+                           "user_id",
+                           "organization_id",
+                           "created_at",
+                           "updated_at",
+                           "manager_approved_by",
+                           "manager_approved_at",
+                           "hr_approved_by",
+                           "hr_approved_at",
+                           "start_date",
+                           "end_date",
+                           "type",
+                           "manager_status",
+                           "hr_status",
+                           "status",
+                           "reason",
+                           "rejection_reason",
+                           ""
+                       ],
+    "activity_logs":  [
+                          "id",
+                          "organization_id",
+                          "new_value",
+                          "created_at",
+                          "entity_id",
+                          "performed_by",
+                          "old_value",
+                          "entity_type",
+                          "action",
+                          ""
+                      ],
+    "attendance":  [
+                       "updated_at",
+                       "organization_id",
+                       "user_id",
+                       "check_in_at",
+                       "check_out_at",
+                       "created_at",
+                       "id",
+                       "status",
+                       "source",
+                       ""
+                   ],
+    "requests":  [
+                     "id",
+                     "organization_id",
+                     "creator_id",
+                     "is_escalated",
+                     "created_at",
+                     "updated_at",
+                     "description",
+                     "status",
+                     "department",
+                     "role_name",
+                     "problem_type",
+                     ""
+                 ],
+    "roles":  [
+                  "id",
+                  "organization_id",
+                  "is_system_role",
+                  "created_at",
+                  "name",
+                  ""
+              ],
+    "chat_message_deletions":  [
+                                   "user_id",
+                                   "message_id",
+                                   "deleted_at",
+                                   ""
+                               ],
+    "meetings":  [
+                     "id",
+                     "organization_id",
+                     "creator_id",
+                     "created_at",
+                     "updated_at",
+                     "start_time",
+                     "end_time",
+                     "title",
+                     "description",
+                     ""
+                 ]
+}

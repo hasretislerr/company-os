@@ -1,0 +1,16 @@
+{
+  "name": "activity-tracker-server",
+  "version": "1.0.0",
+  "description": "Personel aktivite takip sunucusu",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "sql.js": "^1.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  }
+}

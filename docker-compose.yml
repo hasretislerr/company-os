@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # ─── Veritabanı ───────────────────────────────────────────────────
+  db:
+    image: postgres:15-alpine
+    container_name: company_os_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: company_os
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # ─── Önbellek ─────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: company_os_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  # ─── Mesaj Kuyruğu ────────────────────────────────────────────────
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: company_os_rabbitmq
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST: /
+    ports:
+      - "5673:5672" # AMQP protokol portu (Go istemcisi bu portu kullanır, host port changed to avoid conflict)
+      - "15673:15672" # Management UI portu (tarayıcıdan izleme)
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: [ "CMD", "rabbitmq-diagnostics", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Arama Motoru ─────────────────────────────────────────────────
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: company_os_elasticsearch
+    restart: always
+    environment:
+      - discovery.type=single-node # Tek node (geliştirme ortamı)
+      - xpack.security.enabled=true # TLS/auth açık (üretim/geliştirme için)
+      - ELASTIC_PASSWORD=password # Default password for the elastic user
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m # JVM heap: min 512MB, max 512MB
+      - cluster.name=company-os-cluster
+    ports:
+      - "9201:9200" # HTTP REST API portu (9200 host'ta meşgul, 9201'e yönlendirdik)
+      - "9301:9300" # Node-to-node iletişim portu
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1" ]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+volumes:
+  postgres_data:
+  rabbitmq_data:
+  elasticsearch_data:

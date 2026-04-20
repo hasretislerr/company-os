@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS activity_logs;
+DROP TABLE IF EXISTS tasks;
+DROP TABLE IF EXISTS board_columns;
+DROP TABLE IF EXISTS boards;
+DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS workspaces;
+DROP TABLE IF EXISTS role_permissions;
+DROP TABLE IF EXISTS permissions;
+DROP TABLE IF EXISTS organization_members;
+DROP TABLE IF EXISTS roles;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS organizations;
+DROP EXTENSION IF EXISTS "uuid-ossp";

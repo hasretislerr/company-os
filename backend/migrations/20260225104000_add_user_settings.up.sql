@@ -1,0 +1,5 @@
+-- Update users table with more fields
+ALTER TABLE users ADD COLUMN IF NOT EXISTS theme TEXT DEFAULT 'light';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS email_notifications BOOLEAN DEFAULT TRUE;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS push_notifications BOOLEAN DEFAULT TRUE;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS activity_summary BOOLEAN DEFAULT FALSE;

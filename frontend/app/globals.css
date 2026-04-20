@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border-custom: var(--border);
+}
+
+/* Enable class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #f1f5f9;
+  
+  /* Premium Theme Tokens */
+  --premium-indigo: #6366F1;
+  --premium-violet: #8B5CF6;
+  --premium-teal: #14B8A6;
+  --premium-rose: #F43F5E;
+  --premium-amber: #F59E0B;
+  
+  /* Gradients */
+  --grad-main: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  --grad-soft: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+}
+
+/* Premium Layout Utilities */
+@layer components {
+  .premium-card {
+    @apply bg-white rounded-[3rem] border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.02)] transition-all duration-300;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  /* Paper Peel Effect */
+  .peel-corner {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .peel-corner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(225deg, #ffffff 45%, #f3f4f6 50%, #e5e7eb 55%, transparent 60%);
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.03);
+    border-bottom-left-radius: 2rem;
+    transition: all 0.5s ease;
+    z-index: 10;
+  }
+  
+  .peel-corner:hover::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 5px;
+  border: 2px solid var(--background);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Global Mobile Layout Fixes */
+@media (max-width: 768px) {
+  /* Artık navigasyon barı layout akışında olduğu için ekstra paddinge gerek yok */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Global Scroll Lock Utility */
+.stop-scroll {
+  overflow: hidden !important;
+}
+
+.stop-scroll main, 
+.stop-scroll .overflow-y-auto,
+.stop-scroll [style*="overflow-y: auto"] {
+  overflow: hidden !important;
+}
