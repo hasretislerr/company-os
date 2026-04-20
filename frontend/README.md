@@ -32,7 +32,6 @@
 ### DevOps
 - Docker
 - Docker Compose
-- WebSocket
 
 ---
 
@@ -73,14 +72,14 @@
 
 Proje Clean Architecture prensiplerine göre yapılandırılmıştır:
 
-backend/
-├── internal/
-│   ├── domain/
-│   ├── service/
-│   ├── adapter/
-│   └── config/
-├── cmd/
-└── migrations/
+- backend/
+- ├── internal/
+- │   ├── domain/
+- │   ├── service/
+- │   ├── adapter/
+- │   └── config/
+- ├── cmd/
+- └── migrations/
 
 ---
 
@@ -113,13 +112,13 @@ npm run dev
 
 ## 🌍 Ortam Değişkenleri
 
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=postgres
-DB_NAME=company_os
 
-JWT_SECRET=secret
+- DB_HOST=localhost
+- DB_PORT=5432
+- DB_USER=postgres
+- DB_PASSWORD=postgres
+- DB_NAME=company_os
+- JWT_SECRET=secret
 
 ---
 
