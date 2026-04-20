@@ -1,3 +1,19 @@
+<p align="center">
+  <img src="https://dummyimage.com/1200x300/0f172a/ffffff&text=Company+OS+-+Modern+Company+Management+System" />
+</p>
+<h1 align="center">🏢 Company OS</h1>
+
+<p align="center">
+Şirket yönetimi için geliştirilmiş full-stack platform
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-1.22-blue" />
+  <img src="https://img.shields.io/badge/Next.js-black" />
+  <img src="https://img.shields.io/badge/PostgreSQL-blue" />
+  <img src="https://img.shields.io/badge/Docker-blue" />
+  <img src="https://img.shields.io/badge/WebSocket-green" />
+</p>
+
 # 🏢 Company OS
 
 Şirket yönetimi ve haberleşme için geliştirilmiş, ölçeklenebilir full-stack bir işletim sistemidir. Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yönetimini tek bir platformda birleştirir.
