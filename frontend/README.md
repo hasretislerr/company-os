@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏢 Company OS
 
-## Getting Started
+Şirket yönetimi ve haberleşme için geliştirilmiş, ölçeklenebilir full-stack bir işletim sistemidir.  
+Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yönetimini tek bir platformda birleştirir.
 
-First, run the development server:
+---
 
+## 🚀 Projenin Amaçları : 
+
+- Şirket içi süreçleri dijitalleştirmek
+- Takım içi iletişimi kolaylaştırmak
+- Görev ve proje takibini düzenlemek
+- İş akışlarını merkezi hale getirmek
+
+---
+
+## 🧱 Kullanılan Teknolojiler
+
+### Backend
+- Go (Golang)
+- REST + WebSocket mimarisi
+- PostgreSQL
+- RabbitMQ (event-driven yapı)
+- Elasticsearch (arama altyapısı)
+- Clean Architecture yaklaşımı
+
+### Frontend
+- Next.js (React)
+- TypeScript
+- Tailwind CSS
+- App Router mimarisi
+
+### DevOps
+- Docker
+- Docker Compose
+- Mikroservis uyumlu yapı
+- WebSocket
+
+---
+
+## 📦 Özellikler
+
+### 👥 Organizasyon Yönetimi
+- Şirket oluşturma ve yönetme
+- Departman ve rol sistemi
+- Üye davet sistemi
+
+### 📋 Görev Sistemi
+- Proje ve task yönetimi
+- Sürükle-bırak board sistemi
+- Öncelik ve durum takibi
+
+### 💬 Gerçek Zamanlı İletişim
+- Anlık mesajlaşma (chat)
+- Bildirim sistemi
+- WebSocket tabanlı iletişim
+
+### 📅 Takvim & Toplantılar
+- Toplantı planlama
+- Takvim entegrasyonu
+- Hatırlatma sistemi
+
+### 📝 İzin ve Onay Süreçleri
+- İzin talepleri
+- Çok aşamalı onay mekanizması
+- Yönetici paneli
+
+### 📊 Aktivite Takibi
+- Kullanıcı aktivite logları
+- Sistem hareket kayıtları
+
+---
+
+## 🏗️ Mimari Yapı
+
+Proje **Clean Architecture** prensiplerine göre yapılandırılmıştır:
+backend/
+├── internal/
+│ ├── domain/ # İş kuralları
+│ ├── service/ # Business logic
+│ ├── adapter/ # Dış dünya (DB, API)
+│ └── config/ # Konfigürasyon
+├── cmd/ # Uygulama entrypoint
+└── migrations/ # Veritabanı şeması
+
+
+---
+
+## ⚙️ Kurulum
+
+### 1. Repoyu klonla
 ```bash
+git clone https://github.com/hasretislerr/company-os.git
+cd company-os
+
+---
+
+### 2. Docker ile çalıştırma (önerilen)
+
+docker-compose up --build
+
+---
+
+### 3. Backend çalıştırma
+```bash
+cd backend
+go mod tidy
+go run main.go
+
+---
+
+### 4. Frontend çalıştırma
+```bash
+cd frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Ortam Değişkenleri
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Backend için `.env` dosyası:
 
-## Learn More
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_NAME=company_os
 
-To learn more about Next.js, take a look at the following resources:
+JWT_SECRET=secret
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Geliştirme Durumu
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Temel backend sistemi hazır
+- Frontend dashboard hazır
+- Chat sistemi mevcut
+- Task sistemi mevcut
+- Geliştirme devam ediyor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
