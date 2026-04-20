@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="(https://github.com/hasretislerr/company-os/blob/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-04-20%20092957.png)" />
+  <img src="https://github.com/hasretislerr/company-os/blob/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-04-20%20092957.png" />
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Go-1.22-00ADD8?style=for-the-badge" />
