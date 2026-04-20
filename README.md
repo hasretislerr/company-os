@@ -1,17 +1,12 @@
 <p align="center">
-  <img src="https://dummyimage.com/1200x300/0f172a/ffffff&text=Company+OS+-+Modern+Company+Management+System" />
-</p>
-<h1 align="center">🏢 Company OS</h1>
-
-<p align="center">
-Şirket yönetimi için geliştirilmiş full-stack platform
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:2563eb&height=260&section=header&text=Company%20OS&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Modern%20Company%20Management%20System&descAlignY=55&descSize=18" />
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/Go-1.22-blue" />
-  <img src="https://img.shields.io/badge/Next.js-black" />
-  <img src="https://img.shields.io/badge/PostgreSQL-blue" />
-  <img src="https://img.shields.io/badge/Docker-blue" />
-  <img src="https://img.shields.io/badge/WebSocket-green" />
+  <img src="https://img.shields.io/badge/Go-1.22-00ADD8?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/WebSocket-22C55E?style=for-the-badge" />
 </p>
 
 # 🏢 Company OS
