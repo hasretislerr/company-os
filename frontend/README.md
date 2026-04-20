@@ -1,11 +1,10 @@
 # 🏢 Company OS
 
-Şirket yönetimi ve haberleşme için geliştirilmiş, ölçeklenebilir full-stack bir işletim sistemidir.  
-Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yönetimini tek bir platformda birleştirir.
+Şirket yönetimi ve haberleşme için geliştirilmiş, ölçeklenebilir full-stack bir işletim sistemidir. Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yönetimini tek bir platformda birleştirir.
 
 ---
 
-## 🚀 Projenin Amaçları : 
+## 🚀 Projenin Amaçları
 
 - Şirket içi süreçleri dijitalleştirmek
 - Takım içi iletişimi kolaylaştırmak
@@ -21,19 +20,18 @@ Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yön
 - REST + WebSocket mimarisi
 - PostgreSQL
 - RabbitMQ (event-driven yapı)
-- Elasticsearch (arama altyapısı)
+- Elasticsearch
 - Clean Architecture yaklaşımı
 
 ### Frontend
 - Next.js (React)
 - TypeScript
 - Tailwind CSS
-- App Router mimarisi
+- App Router
 
 ### DevOps
 - Docker
 - Docker Compose
-- Mikroservis uyumlu yapı
 - WebSocket
 
 ---
@@ -51,9 +49,9 @@ Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yön
 - Öncelik ve durum takibi
 
 ### 💬 Gerçek Zamanlı İletişim
-- Anlık mesajlaşma (chat)
+- Chat sistemi
 - Bildirim sistemi
-- WebSocket tabanlı iletişim
+- WebSocket tabanlı yapı
 
 ### 📅 Takvim & Toplantılar
 - Toplantı planlama
@@ -62,47 +60,44 @@ Görev yönetimi, iletişim, toplantılar, izin süreçleri ve organizasyon yön
 
 ### 📝 İzin ve Onay Süreçleri
 - İzin talepleri
-- Çok aşamalı onay mekanizması
+- Çok aşamalı onay sistemi
 - Yönetici paneli
 
 ### 📊 Aktivite Takibi
-- Kullanıcı aktivite logları
+- Kullanıcı logları
 - Sistem hareket kayıtları
 
 ---
 
 ## 🏗️ Mimari Yapı
 
-Proje **Clean Architecture** prensiplerine göre yapılandırılmıştır:
+Proje Clean Architecture prensiplerine göre yapılandırılmıştır:
+
 backend/
 ├── internal/
-│ ├── domain/ # İş kuralları
-│ ├── service/ # Business logic
-│ ├── adapter/ # Dış dünya (DB, API)
-│ └── config/ # Konfigürasyon
-├── cmd/ # Uygulama entrypoint
-└── migrations/ # Veritabanı şeması
-
+│   ├── domain/
+│   ├── service/
+│   ├── adapter/
+│   └── config/
+├── cmd/
+└── migrations/
 
 ---
 
 ## ⚙️ Kurulum
 
-### 1. Repoyu klonla
-```bash
+### 1. Repo klonlama
 git clone https://github.com/hasretislerr/company-os.git
 cd company-os
 
 ---
 
-### 2. Docker ile çalıştırma (önerilen)
-
+### 2. Docker ile çalıştırma
 docker-compose up --build
 
 ---
 
 ### 3. Backend çalıştırma
-```bash
 cd backend
 go mod tidy
 go run main.go
@@ -110,16 +105,13 @@ go run main.go
 ---
 
 ### 4. Frontend çalıştırma
-```bash
 cd frontend
 npm install
 npm run dev
 
 ---
 
-## Ortam Değişkenleri
-
-Backend için `.env` dosyası:
+## 🌍 Ortam Değişkenleri
 
 DB_HOST=localhost
 DB_PORT=5432
@@ -131,13 +123,10 @@ JWT_SECRET=secret
 
 ---
 
+## 📈 Geliştirme Durumu
 
-## Geliştirme Durumu
-
-- Temel backend sistemi hazır
+- Backend tamamlandı (temel yapı)
 - Frontend dashboard hazır
-- Chat sistemi mevcut
-- Task sistemi mevcut
+- Chat sistemi aktif
+- Task sistemi aktif
 - Geliştirme devam ediyor
-
----
